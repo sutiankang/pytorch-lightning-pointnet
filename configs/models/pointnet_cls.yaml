@@ -1,0 +1,11 @@
+model_name: pointnet_cls
+
+# model
+inplace: true
+global_feature: true
+feature_transform: true
+dropout: [0.0, 0.4, 0.0]
+
+# loss
+losses: ['pointnet_cls']
+loss_weights: [1.0]
