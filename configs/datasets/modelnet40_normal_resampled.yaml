@@ -1,0 +1,16 @@
+dataset_name: modelnet40
+data_dir: data/modelnet40_normal_resampled
+num_points: 1024
+use_fps: ture  # farthest point sampling
+use_normals: true
+use_cache: true
+
+# metrics
+metrics: ['accuracy']
+metric_weights: [1.0]
+
+classes: ['airplane', 'bathtub', 'bed', 'bench', 'bookshelf', 'bottle', 'bowl',
+'car', 'chair', 'cone', 'cup', 'curtain', 'desk', 'door', 'dresser', 'flower_pot',
+'glass_box', 'guitar', 'keyboard', 'lamp', 'laptop', 'mantel', 'monitor',
+'night_stand', 'person', 'piano', 'plant', 'radio', 'range_hood', 'sink', 'sofa',
+'stairs', 'stool', 'table', 'tent', 'toilet', 'tv_stand', 'vase', 'wardrobe', 'xbox']
