@@ -42,7 +42,6 @@ python train.py
 | Model | Accuracy |
 |--|--|
 | PointNet (Official) |  89.2 |
-| PointNet2 (Official) | 91.9 |
 | Pointnet_Pointnet2_pytorch (Pytorch with normal) |  91.4 |
 | pytorch-lightning-pointnet (pytorch-lightning with normal) |  91.7 |
 
