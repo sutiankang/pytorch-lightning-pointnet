@@ -161,7 +161,7 @@ class ClassifierEngine(LightningModule):
                         info_dict[k] = []
                     info_dict[k].append(float(v))
         # plot
-        if len(info_dict) != 0:  # 查询keyword是否存在
+        if len(info_dict) != 0: 
             for k, v in info_dict.items():
                 # plt.figure(figsize=(12, 8))
                 plt.plot(steps, v, label=f'{k}_curve')
@@ -246,7 +246,7 @@ class ClassifierEngine(LightningModule):
     def on_train_start(self):
         # general name / experiment name / models
         # save model file, config file, dataset file
-        # 保存日志到txt或log或json文件中，记录模型信息，过程信息
+        
         self.save_model_dir = os.path.join(self.hparams.work_dir, 'models')
         self.save_config_dir = os.path.join(self.hparams.work_dir, 'configs')
         os.makedirs(self.save_model_dir, exist_ok=True)
