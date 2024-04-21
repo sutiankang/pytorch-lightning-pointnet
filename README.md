@@ -36,7 +36,7 @@ python train.py
 ## Hyper-parameter Tutorial
 - The common setting (including ddp, early stopping or optimizer and any other tricks) can be set from [here](https://github.com/sutiankang/pytorch-lightning-pointnet/blob/main/configs/default.yaml).
 - If you want to speed up dataset loading using offline data, you can set the parameter ```use_cache``` to ```True``` from [here](https://github.com/sutiankang/pytorch-lightning-pointnet/blob/main/configs/datasets/modelnet40_normal_resampled.yaml). 
-- If you want to get better performance by adding normals, you can set the paramater ```use_normals``` to ```True``` from[here](https://github.com/sutiankang/pytorch-lightning-pointnet/blob/main/configs/datasets/modelnet40_normal_resampled.yaml).
+- If you want to get better performance by adding normals, you can set the paramater ```use_normals``` to ```True``` from [here](https://github.com/sutiankang/pytorch-lightning-pointnet/blob/main/configs/datasets/modelnet40_normal_resampled.yaml).
 
 ## Results
 | Model | Accuracy |
