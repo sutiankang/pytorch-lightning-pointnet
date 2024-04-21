@@ -44,7 +44,10 @@ If you want to speed up loading dataset, you can set
 | Pointnet_Pointnet2_pytorch (Pytorch with normal) |  91.4 |
 | pytorch-lightning-pointnet (pytorch-lightning with normal) |  91.7 |
 
-## Reference By
+## Weights
+You can download our weight after training from [here](https://drive.google.com/drive/folders/14iv_pvSM9Og0rVIoIdCT-_nbuNAXot5f?usp=sharing).
+
+## Reference
 [Pytorch_Pointnet_Pointnet2](https://github.com/yanx27/Pointnet_Pointnet2_pytorch)
 
 ## Citation
