@@ -37,8 +37,12 @@ python train.py
 If you want to speed up loading dataset, you can set 
 
 ## Results
-
-
+| Model | Accuracy |
+|--|--|
+| PointNet (Official) |  89.2 |
+| PointNet2 (Official) | 91.9 |
+| Pointnet_Pointnet2_pytorch (Pytorch with normal) |  91.4 |
+| pytorch-lightning-pointnet (pytorch-lightning with normal) |  91.7 |
 
 ## Reference By
 [Pytorch_Pointnet_Pointnet2](https://github.com/yanx27/Pointnet_Pointnet2_pytorch)
