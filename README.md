@@ -34,7 +34,7 @@ python train.py
 ```
 
 ## Hyper-parameter Tutorial
-If you want to speed up loading dataset, you can set 
+If you want to speed up dataset loading using offline data, you can set the parameter ```use_cache``` to ```True``` from [here](https://github.com/sutiankang/pytorch-lightning-pointnet/blob/main/configs/datasets/modelnet40_normal_resampled.yaml). 
 
 ## Results
 | Model | Accuracy |
