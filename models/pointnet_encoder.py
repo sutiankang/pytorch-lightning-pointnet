@@ -38,7 +38,7 @@ class STN3d(nn.Module):
         b = x.shape[0]  # batch size
         for conv_layer in self.conv_layers:
             x = conv_layer(x)
-        x = torch.max(x, 2, keepdim=True)[0]  # 通道维度取最大值,置换不变性
+        x = torch.max(x, 2, keepdim=True)[0] 
         x = x.view(-1, self.fc_channels[0])
 
         for fc_layer in self.fc_layers:
@@ -84,7 +84,7 @@ class STNkd(nn.Module):
         b = x.shape[0]  # batch size
         for conv_layer in self.conv_layers:
             x = conv_layer(x)
-        x = torch.max(x, 2, keepdim=True)[0]  # 通道维度取最大值,置换不变性
+        x = torch.max(x, 2, keepdim=True)[0]
         x = x.view(-1, self.fc_channels[0])
 
         for fc_layer in self.fc_layers:
