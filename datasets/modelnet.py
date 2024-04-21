@@ -15,15 +15,15 @@ def farthest_point_sample(point, npoint):
     Return:
         centroids: sampled pointcloud index, [npoint, D]
     """
-    N, D = point.shape  # N表示所有点,npoint表示采样点
-    xyz = point[:, :3]  # without normals
+    N, D = point.shape  
+    xyz = point[:, :3] 
     centroids = np.zeros((npoint,))
-    distance = np.ones((N,)) * 1e10  # 储存的是每个点到各个采样点的最小距离
-    farthest = np.random.randint(0, N)  # 随机采样一个点
+    distance = np.ones((N,)) * 1e10  
+    farthest = np.random.randint(0, N)
     for i in range(npoint):
-        centroids[i] = farthest  # 最远点的index
-        centroid = xyz[farthest, :]  # 最远点的坐标
-        dist = np.sum((xyz - centroid) ** 2, -1)  # 所有点到最远点的距离
+        centroids[i] = farthest 
+        centroid = xyz[farthest, :]  
+        dist = np.sum((xyz - centroid) ** 2, -1)  
         mask = dist < distance
         distance[mask] = dist[mask]
         farthest = np.argmax(distance, -1)
@@ -37,8 +37,8 @@ def pc_normalize(pc):
         output: N x D
     """
     centroid = np.mean(pc, axis=0)
-    pc = pc - centroid  # 去均值
-    m = np.max(np.sqrt(np.sum(pc**2, axis=1)))  # 最大欧式距离
+    pc = pc - centroid  
+    m = np.max(np.sqrt(np.sum(pc**2, axis=1)))  
     pc = pc / m  # [-1, 1]
     return pc
 
