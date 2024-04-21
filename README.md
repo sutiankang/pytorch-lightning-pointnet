@@ -7,10 +7,11 @@ This repo is implementation for [PointNet](https://openaccess.thecvf.com/content
 conda create -n pl_pointnet python=3.10.6
 ```
 - Pytorch 2.0.1+cu118 Torchvision 0.15.2+cu118 Torchaudio 2.0.2+cu118
+  Install pytorch by conda as:
 ```
 conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.8 -c pytorch -c nvidia 
 ```
-or
+  or pip as:
 ```
 pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
 ```
