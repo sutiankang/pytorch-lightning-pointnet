@@ -32,7 +32,9 @@ The modelnet10/40 dataset can be downloaded from [here](https://github.com/yanx2
 ```
 python train.py
 ```
-- The 
+
+## Hyper-parameter Tutorial
+If you want to speed up loading dataset, you can set 
 
 ## Results
 
