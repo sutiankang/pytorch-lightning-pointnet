@@ -28,6 +28,15 @@ pip install -r requirements.txt
 ### Download
 The modelnet10/40 dataset can be downloaded from [here](https://github.com/yanx27/Pointnet_Pointnet2_pytorch?tab=readme-ov-file).
 
+## Train
+```
+python train.py
+```
+- The 
+
+## Reference By
+[Pytorch_Pointnet_Pointnet2](https://github.com/yanx27/Pointnet_Pointnet2_pytorch)
+
 ## Citation
 If you find this repo useful in your research, please consider citing it and our other works:
 ```
