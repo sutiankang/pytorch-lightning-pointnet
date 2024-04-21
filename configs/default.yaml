@@ -1,0 +1,71 @@
+# default
+min_epochs: 30
+max_epochs: 200
+seed: 19990309
+profiler: simple # simple, advanced, null
+workers: true  # solid random
+work_dir: ./work_dirs/pointnet_cls
+repeat_work_dir: false  # whether create work dir when conducting many experiments with same work_dir
+create_time_dir: true  # create time dictionary, senior to repeat work dir
+model_summary: true
+log_txt_interval: 50  # log info to txt file
+
+# dataloader
+num_workers: 4
+pin_memory: true
+batch_size: 24
+
+# device
+accelerator: auto  # ("cpu", "gpu", "tpu", "ipu", "hpu", "mps", "auto")
+benchmark: true
+deterministic: false
+num_gpus: 1  # int, str = '0,1,2,3' or list [0,1,2,3], -1 indicate all available devices should be used
+num_nodes: 1  # number of machines
+strategy: auto  # auto, dp, ddp, ddp_spawn, fsdp, deepspeed, ipu, hpu_parallel, hpu_single, ipu_strategy, xla, single_xla
+sync_bn: true
+
+# gradient
+gradient_clip: null  # gradient will be clipped in [-gradient_clip, gradient_clip]
+gradient_clip_algorithm: norm  #
+accumulate_gradient: 1  # compute gradient after batch * accumulate_gradient
+
+# checkpoint
+resume: null
+checkpoint: null
+map_location: cpu
+strict: true
+save_top_k: 5  # -1 = all
+save_last: true
+
+# amp
+precision: 16-mixed # (64, '64' or '64-true'), full precision (32, '32' or '32-true'), 16bit mixed precision (16, '16', '16-mixed') or bfloat16 mixed precision ('bf16', 'bf16-mixed').
+
+# evaluation
+eval_interval: 1
+
+# optimizer
+optimizer: adamw  # sgd, adam, adamw, rmsprop
+learning_rate: 1.0e-3
+betas: [0.9, 0.999] # adam and adamw; '()' become a string
+weight_decay: 1.0e-4  # sgd:5e-4 adam:1e-4
+momentum: 0.9 # sgd=0.9, rmsprop
+alpha: 0.9  # rmsprop, 平滑常数
+centered: true  # rmsprop
+
+
+# scheduler
+scheduler: cosine  # step, multi_step, exp, cosine
+step_size: 20  # step scheduler
+milestones: [20, 50, 100]  # multi_step scheduler
+gamma: 0.7  # step, multi_step and exp scheduler, lr=lr*gamma(for each iteration, e.g. step and multi_step update by step parameter and exp updates by each epoch)
+min_lr: 1.0e-6  # the minimum learning rate for cosine scheduler
+warmup_epochs: 3  # warmup epochs
+init_lr: 1.0e-4  # warmup initialized learning rate
+warmup_strategy: linear  # linear, constant, cosine
+
+# save checkpoint
+monitor: val_fitness_avg
+monitor_mode: max # min or max
+use_early_stopping: true
+min_delta: 0.001 # early stopping condition, if new_score - old_score <= min_delta can be thought no improvement (now upper is thought better)
+patience: 30 # early stopping patience
