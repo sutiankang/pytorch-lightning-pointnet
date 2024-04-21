@@ -15,9 +15,9 @@ def get_cfg():
     parser.add_argument('--default_config', type=str, help='',
                         default='configs/default.yaml')
     parser.add_argument('--dataset_config', type=str, help='',
-                        default='configs/datasets/classification/modelnet40_normal_resampled.yaml')
+                        default='configs/datasets/modelnet40_normal_resampled.yaml')
     parser.add_argument('--model_config', type=str, help='',
-                        default='configs/models/classification/pointnet_cls.yaml')
+                        default='configs/models/pointnet_cls.yaml')
     cfg = parser.parse_args()
 
     default_config_dict = read_file(cfg.default_config)
