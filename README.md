@@ -27,3 +27,14 @@ pip install -r requirements.txt
 ## Data Preparation(ModelNet10/Modelnet40)
 ### Download
 The modelnet10/40 dataset can be downloaded from [here](https://github.com/yanx27/Pointnet_Pointnet2_pytorch?tab=readme-ov-file).
+
+## Citation
+If you find this repo useful in your research, please consider citing it and our other works:
+```
+@article{pytorch-lightning-pointnet,
+      Author = {Tiankang Su},
+      Title = {pytorch-lightning-pointnet},
+      Journal = {https://github.com/sutiankang/pytorch-lightning-pointnet},
+      Year = {2024}
+}
+```
